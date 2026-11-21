@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Наушники AirSound Pro — активное шумоподавление, 30 часов автономности, цена и заявка в PlayTable.">
+  <title>Наушники AirSound Pro — PlayTable</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Перейти к основному содержимому</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-header__logo" href="index.html">PlayTable</a>
+      <nav class="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог</a></li>
+          <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="product.html">Товар</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заявка</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+      <a class="breadcrumbs__link" href="index.html">Главная</a> /
+      <a class="breadcrumbs__link" href="catalog.html">Каталог</a> /
+      <span class="breadcrumbs__current">Наушники AirSound Pro</span>
+    </nav>
+
+    <article class="product-detail">
+      <div class="product-detail__media">
+        <img class="product-detail__img" 
+             src="images/airsound-pro.jpg" 
+             srcset="images/airsound-pro.jpg 640w" 
+             sizes="(max-width: 768px) 100vw, 50vw" 
+             alt="Наушники AirSound Pro" 
+             width="640" height="480" 
+             loading="lazy">
+        <span class="product-card__badge product-card__badge--new product-detail__badge">Новинка</span>
+      </div>
+      <div class="product-detail__info">
+        <h1 class="product-detail__title">Наушники AirSound Pro</h1>
+        <p class="product-detail__description">Беспроводные наушники с активным шумоподавлением, глубоким басом и автономностью до 30 часов.</p>
+        <p class="product-detail__price">12 490 ₽</p>
+        <button class="button button--primary" id="openModal" type="button">Оставить заявку</button>
+
+        <div class="table-wrapper">
+          <table class="specs product-table">
+            <caption class="specs__caption">Характеристики AirSound Pro</caption>
+            <thead>
+              <tr><th scope="col">Параметр</th><th scope="col">Значение</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Тип</td><td>Накладные, беспроводные</td></tr>
+              <tr><td>Шумоподавление</td><td>Активное (ANC)</td></tr>
+              <tr><td>Автономность</td><td>до 30 часов</td></tr>
+              <tr><td>Зарядка</td><td>USB-C, быстрая</td></tr>
+              <tr><td>Вес</td><td>250 г</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </article>
+
+    <aside class="similar">
+      <h2 class="section__title">Похожие товары</h2>
+      <ul class="similar__list">
+        <li><a class="similar__link" href="product-nova-x5.html">Смартфон Nova X5 — 39 990 ₽</a></li>
+        <li><a class="similar__link" href="product-pulse-2.html">Умные часы Pulse 2 — 9 990 ₽</a></li>
+        <li><a class="similar__link" href="product.html">PowerBank Volt 20000 — 3 490 ₽</a></li>
+      </ul>
+    </aside>
+
+    <dialog class="modal" id="orderModal">
+      <form class="modal__content" method="dialog">
+        <h2 class="modal__title">Оставить заявку</h2>
+        <p class="modal__text">Оставьте телефон — перезвоним и подтвердим наличие AirSound Pro.</p>
+        <label class="modal__label" for="modal-phone">Телефон</label>
+        <input class="modal__input" id="modal-phone" name="phone" type="tel" required>
+        <div class="modal__actions">
+          <button class="button button--primary" value="send" type="submit">Отправить</button>
+          <button class="button button--ghost" value="close" type="submit">Закрыть</button>
+        </div>
+      </form>
+    </dialog>
+  </main>
+
+  <footer class="site-footer">
+    <p class="site-footer__text">© 2026 PlayTable. Контрольная работа №1.</p>
+  </footer>
+
+  <button class="to-top" id="toTop" aria-label="Наверх">↑</button>
+  <script src="js/main.js"></script>
+</body>
+</html>

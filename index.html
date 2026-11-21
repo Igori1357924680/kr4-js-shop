@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="PlayTable — магазин гаджетов и аксессуаров: смартфоны, наушники, умные часы и аксессуары с доставкой.">
+  <title>PlayTable — гаджеты и аксессуары</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Перейти к основному содержимому</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-header__logo" href="index.html">PlayTable</a>
+      <nav class="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="index.html">Главная</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="product.html">Товар</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заявка</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Единственный тег main на странице с нужным ID -->
+  <main id="main-content">
+    
+    <section class="hero" id="hero">
+      <div class="hero__content">
+        <h1 class="hero__title">Гаджеты, которые играют по вашим правилам</h1>
+        <p class="hero__text">Смартфоны, наушники, умные часы и аксессуары. Быстрая доставка, гарантия 12 месяцев, честные цены.</p>
+        <div class="hero__actions">
+          <a class="button button--primary" href="catalog.html">В каталог</a>
+          <a class="button button--ghost" href="order.html">Оставить заявку</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="advantages">
+      <h2 class="section__title">Почему PlayTable</h2>
+      <ul class="advantages">
+        <li class="advantages__item">
+          <h3 class="advantages__title">Гарантия 12 месяцев</h3>
+          <p class="advantages__text">На все гаджеты — официальная гарантия и сервис.</p>
+        </li>
+        <li class="advantages__item">
+          <h3 class="advantages__title">Доставка за 1 день</h3>
+          <p class="advantages__text">По городу — курьером, по России — СДЭК и Почтой.</p>
+        </li>
+        <li class="advantages__item">
+          <h3 class="advantages__title">Проверка при получении</h3>
+          <p class="advantages__text">Можно вскрыть и проверить товар до оплаты.</p>
+        </li>
+        <li class="advantages__item">
+          <h3 class="advantages__title">Поддержка 24/7</h3>
+          <p class="advantages__text">Поможем выбрать и настроить устройство.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="section" id="popular">
+      <h2 class="section__title">Популярные товары</h2>
+      <div class="product-grid">
+        <article class="product-card product-card--hit">
+          <span class="product-card__badge">Хит</span>
+          <h3 class="product-card__title">Смартфон Nova X5</h3>
+          <p class="product-card__description">6.5", 256 ГБ, камера 108 МП, 5G.</p>
+          <p class="product-card__price">39 990 ₽</p>
+          <a class="button button--primary product-card__button" href="product-nova-x5.html">Подробнее</a>
+        </article>
+        <article class="product-card">
+          <span class="product-card__badge product-card__badge--new">Новинка</span>
+          <h3 class="product-card__title">Наушники AirSound Pro</h3>
+          <p class="product-card__description">Активное шумоподавление, 30 ч автономности.</p>
+          <p class="product-card__price">12 490 ₽</p>
+          <a class="button button--primary product-card__button" href="product-airsound-pro.html">Подробнее</a>
+        </article>
+        <article class="product-card product-card--discount">
+          <span class="product-card__badge product-card__badge--discount">Скидка</span>
+          <h3 class="product-card__title">Умные часы Pulse 2</h3>
+          <p class="product-card__description">AMOLED, GPS, пульсометр, 14 дней работы.</p>
+          <p class="product-card__price">9 990 ₽</p>
+          <a class="button button--primary product-card__button" href="product-pulse-2.html">Подробнее</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="contacts">
+      <h2 class="section__title">Контакты</h2>
+      <p class="section__text">Телефон: +7 (900) 000-00-00 · Email: hello@playtable.ru · Адрес: Москва, ул. Примерная, 1</p>
+      <a class="button button--ghost" href="contacts.html">Все контакты</a>
+    </section>
+
+  </main> <!-- Закрываем main ЗДЕСЬ, до подвала -->
+
+  <footer class="site-footer">
+    <p class="site-footer__text">© 2026 PlayTable. Контрольная работа №1.</p>
+  </footer>
+
+  <button class="to-top" id="toTop" aria-label="Наверх">↑</button>
+  <script src="js/main.js"></script>
+</body>
+</html>

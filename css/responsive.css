@@ -1,0 +1,165 @@
+/* =========================================
+   КР №3: Адаптивность (Mobile First)
+   ========================================= */
+
+/* 1. Базовые стили для мобильных (по умолчанию) */
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  overflow-x: hidden; /* Запрет горизонтального скролла всей страницы */
+}
+
+/* Адаптивное меню (бургер-стиль) */
+.site-header__inner {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.site-nav__list {
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-start;
+}
+
+/* Сетка карточек в одну колонку */
+.product-grid {
+  grid-template-columns: 1fr;
+}
+
+/* Каталог: фильтр сверху, товары снизу */
+.catalog-layout {
+  grid-template-columns: 1fr;
+}
+
+.catalog-filters {
+  position: static; /* Убираем sticky на мобильных */
+  margin-bottom: 20px;
+}
+
+/* Страница товара: картинка сверху, описание снизу */
+.product-detail {
+  grid-template-columns: 1fr;
+}
+
+/* Таблица характеристик */
+.table-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.product-table {
+  min-width: 600px; /* Задаем минимальную ширину, чтобы таблица не сжималась */
+}
+
+/* Форма заявки */
+.order-form {
+  max-width: 100%;
+}
+
+.order-form__actions {
+  flex-direction: column;
+}
+
+.button {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+/* Hero-блок */
+.hero__title {
+  font-size: 28px;
+}
+.hero__actions {
+  flex-direction: column;
+}
+
+/* Картинка товара */
+.product-detail__img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg);
+  object-fit: cover;
+}
+
+/* Skip-link (доступность) */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  background: var(--color-primary);
+  color: white;
+  padding: 10px;
+  z-index: 1000;
+  transition: top 0.2s;
+}
+.skip-link:focus {
+  top: 0;
+}
+
+/* 2. Планшеты (от 768px) */
+@media (min-width: 768px) {
+  .site-header__inner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .site-nav__list {
+    justify-content: flex-end;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .catalog-layout {
+    grid-template-columns: 220px 1fr;
+  }
+
+  .catalog-filters {
+    position: sticky;
+    top: 80px;
+    margin-bottom: 0;
+  }
+
+  .product-detail {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .order-form__actions {
+    flex-direction: row;
+  }
+
+  .button {
+    width: auto;
+    margin-bottom: 0;
+  }
+  
+  .hero__title {
+    font-size: 36px;
+  }
+  
+  .hero__actions {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+/* 3. Большие экраны (от 1024px) */
+@media (min-width: 1024px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* 4. Очень широкие экраны (от 1440px) */
+@media (min-width: 1440px) {
+  .product-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
