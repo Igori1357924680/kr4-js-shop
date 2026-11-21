@@ -10,6 +10,7 @@
 </head>
 <body>
   <a href="#main-content" class="skip-link">Перейти к основному содержимому</a>
+
   <header class="site-header">
     <div class="site-header__inner">
       <a class="site-header__logo" href="index.html">PlayTable</a>
@@ -20,87 +21,68 @@
           <li class="site-nav__item"><a class="site-nav__link" href="product.html">Товар</a></li>
           <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заявка</a></li>
           <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="cart.html">Корзина (<span id="cart-count">0</span>)</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main>
+  <main id="main-content">
     <nav class="breadcrumbs" aria-label="Хлебные крошки">
       <a class="breadcrumbs__link" href="index.html">Главная</a> /
       <span class="breadcrumbs__current">Каталог</span>
     </nav>
 
     <div class="catalog-layout">
+      <!-- Фильтры -->
       <aside class="catalog-filters">
-        <h2 class="catalog-filters__title">Категории</h2>
-        <ul class="catalog-filters__list">
-          <li><a class="catalog-filters__link" href="#smartphones">Смартфоны</a></li>
-          <li><a class="catalog-filters__link" href="#audio">Аудио</a></li>
-          <li><a class="catalog-filters__link" href="#wearables">Умные часы</a></li>
-          <li><a class="catalog-filters__link" href="#accessories">Аксессуары</a></li>
-        </ul>
-      </aside>
-
-      <section class="catalog" id="smartphones">
-        <h1 class="section__title">Каталог товаров</h1>
-
-        <div class="product-grid">
-          <article class="product-card product-card--hit">
-            <span class="product-card__badge">Хит</span>
-            <h3 class="product-card__title">Смартфон Nova X5</h3>
-            <p class="product-card__description">6.5", 256 ГБ, 108 МП, 5G.</p>
-            <p class="product-card__price">39 990 ₽</p>
-            <a class="button button--primary product-card__button" href="product-nova-x5.html">Подробнее</a>
-          </article>
-          <article class="product-card">
-            <span class="product-card__badge product-card__badge--new">Новинка</span>
-            <h3 class="product-card__title">Смартфон Nova X5 Mini</h3>
-            <p class="product-card__description">5.8", 128 ГБ, 64 МП.</p>
-            <p class="product-card__price">29 990 ₽</p>
-            <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
-          </article>
-          <article class="product-card">
-            <h3 class="product-card__title">Наушники AirSound Pro</h3>
-            <p class="product-card__description">ANC, 30 ч автономности.</p>
-            <p class="product-card__price">12 490 ₽</p>
-            <a class="button button--primary product-card__button" href="product-airsound-pro.html">Подробнее</a>
-          </article>
-          <article class="product-card product-card--discount">
-            <span class="product-card__badge product-card__badge--discount">Скидка</span>
-            <h3 class="product-card__title">Умные часы Pulse 2</h3>
-            <p class="product-card__description">AMOLED, GPS, 14 дней работы.</p>
-            <p class="product-card__price">9 990 ₽</p>
-            <a class="button button--primary product-card__button" href="product-pulse-2.html">Подробнее</a>
-          </article>
-          <article class="product-card">
-            <h3 class="product-card__title">PowerBank Volt 20000</h3>
-            <p class="product-card__description">20 000 мА·ч, 65 Вт, USB-C.</p>
-            <p class="product-card__price">3 490 ₽</p>
-            <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
-          </article>
-          <article class="product-card">
-            <h3 class="product-card__title">Кабель USB-C 2 м</h3>
-            <p class="product-card__description">Нейлоновая оплётка, 100 Вт.</p>
-            <p class="product-card__price">790 ₽</p>
-            <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
-          </article>
+        <h2 class="catalog-filters__title">Фильтры</h2>
+        
+        <div class="catalog-filters__group" style="margin-bottom: 15px;">
+          <label for="search-input" style="display:block; margin-bottom: 5px; font-weight: bold;">Поиск:</label>
+          <input type="text" id="search-input" class="catalog-filters__input" placeholder="Название..." style="width:100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
         </div>
 
-        <section class="section" id="accessories">
-          <h2 class="section__title">Как выбрать аксессуар</h2>
-          <p class="section__text">Проверьте совместимость разъёмов, поддержку быстрой зарядки и длину кабеля. Если сомневаетесь — оставьте заявку, и мы подберём аксессуар под ваше устройство.</p>
-          <a class="button button--ghost" href="order.html">Оставить заявку</a>
-        </section>
+        <div class="catalog-filters__group" style="margin-bottom: 15px;">
+          <label for="category-select" style="display:block; margin-bottom: 5px; font-weight: bold;">Категория:</label>
+          <select id="category-select" class="catalog-filters__input" style="width:100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+            <option value="all">Все товары</option>
+            <option value="smartphones">Смартфоны</option>
+            <option value="audio">Аудио</option>
+            <option value="wearables">Умные часы</option>
+            <option value="accessories">Аксессуары</option>
+          </select>
+        </div>
+
+        <div class="catalog-filters__group" style="margin-bottom: 15px;">
+          <label for="sort-select" style="display:block; margin-bottom: 5px; font-weight: bold;">Сортировка:</label>
+          <select id="sort-select" class="catalog-filters__input" style="width:100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+            <option value="default">По умолчанию</option>
+            <option value="price-asc">Цена (по возрастанию)</option>
+            <option value="price-desc">Цена (по убыванию)</option>
+            <option value="name">По названию (А-Я)</option>
+          </select>
+        </div>
+      </aside>
+
+      <!-- Контейнер для карточек, которые сгенерирует JS -->
+      <section class="catalog">
+        <h1 class="section__title">Каталог товаров</h1>
+        <div class="product-grid" id="product-grid"></div>
       </section>
     </div>
-  <main id="main-content">
+  </main>
 
   <footer class="site-footer">
-    <p class="site-footer__text">© 2026 PlayTable. Контрольная работа №1.</p>
+    <p class="site-footer__text">© 2026 PlayTable. Контрольная работа №4.</p>
   </footer>
 
   <button class="to-top" id="toTop" aria-label="Наверх">↑</button>
+  
+  <!-- Подключение скриптов -->
+  <script src="js/data.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/catalog.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

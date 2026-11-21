@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Корзина — PlayTable</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Перейти к основному содержимому</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-header__logo" href="index.html">PlayTable</a>
+      <nav class="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заявка</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+          <li class="site-nav__item"><a class="site-nav__link active" href="cart.html">Корзина (<span id="cart-count">0</span>)</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="section">
+    <h1 class="section__title">Ваша корзина</h1>
+    
+    <div id="cart-container" class="product-grid">
+      <!-- Сюда будут выводиться товары -->
+    </div>
+
+    <div class="cart-summary" style="margin-top: 30px; padding: 20px; background: #f5f7fb; border-radius: 8px;">
+      <h2>Итого: <span id="cart-total">0</span> ₽</h2>
+      <button class="button button--primary" style="margin-top: 15px;" onclick="alert('Заказ оформлен! (Имитация)')">Оформить заказ</button>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p class="site-footer__text">© 2026 PlayTable. Контрольная работа №4.</p>
+  </footer>
+
+  <!-- Подключаем скрипты -->
+  <script src="js/data.js"></script>
+  <script src="js/cart.js"></script>
+</body>
+</html>
