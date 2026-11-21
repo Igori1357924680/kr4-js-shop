@@ -19,7 +19,7 @@
           <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог</a></li>
           <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заявка</a></li>
           <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
-          <li class="site-nav__item"><a class="site-nav__link active" href="cart.html">Корзина (<span id="cart-count">0</span>)</a></li>
+          <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="cart.html">Корзина (<span id="cart-count">0</span>)</a></li>
         </ul>
       </nav>
     </div>
@@ -34,7 +34,8 @@
 
     <div class="cart-summary" style="margin-top: 30px; padding: 20px; background: #f5f7fb; border-radius: 8px;">
       <h2>Итого: <span id="cart-total">0</span> ₽</h2>
-      <button class="button button--primary" style="margin-top: 15px;" onclick="alert('Заказ оформлен! (Имитация)')">Оформить заказ</button>
+      <button class="button button--primary" id="checkout-btn" style="margin-top: 15px;">Оформить заказ</button>
+      <div id="checkout-message" style="margin-top: 15px; font-weight: bold; color: green; display: none;"></div>
     </div>
   </main>
 
@@ -42,7 +43,6 @@
     <p class="site-footer__text">© 2026 PlayTable. Контрольная работа №4.</p>
   </footer>
 
-  <!-- Подключаем скрипты -->
   <script src="js/data.js"></script>
   <script src="js/cart.js"></script>
 </body>

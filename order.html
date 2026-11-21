@@ -20,12 +20,13 @@
           <li class="site-nav__item"><a class="site-nav__link" href="product.html">Товар</a></li>
           <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="order.html">Заявка</a></li>
           <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="cart.html">Корзина (<span id="cart-count">0</span>)</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main>
+  <main id="main-content">
     <section class="section">
       <h1 class="section__title">Оформление заявки</h1>
       <p class="section__text">Заполните форму — мы свяжемся с вами в течение 15 минут.</p>
@@ -73,14 +74,16 @@
         </div>
       </form>
     </section>
-  <main id="main-content">
+  </main>
 
   <footer class="site-footer">
-    <p class="site-footer__text">© 2026 PlayTable. Контрольная работа №1.</p>
+    <p class="site-footer__text">© 2026 PlayTable. Контрольная работа №4.</p>
   </footer>
 
   <button class="to-top" id="toTop" aria-label="Наверх">↑</button>
-  <script src="js/main.js"></script>
   <script src="js/validation.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
